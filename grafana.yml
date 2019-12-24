@@ -1,0 +1,8 @@
+version: '3.5'
+services:
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+       - "10.138.101.16:3000:3000"
+    environment:
+       GF_SECURITY_ADMIN_PASSWORD: sam_wang@ctl.creative.com

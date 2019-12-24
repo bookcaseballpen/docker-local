@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: creative_im
+      POSTGRES_PASSWORD: 100200
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "10.138.101.16:5432:5432"
+    network_mode: "host"
+    restart: unless-stopped
+  
+
+volumes:
+    postgres:
